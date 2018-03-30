@@ -20,11 +20,11 @@ android {
 }
 
 dependencies {
-    compile project(':library')
-    compile fileTree(include: ['*.jar'], dir: 'libs')
-    testCompile 'junit:junit:4.12'
-    compile 'com.android.support:support-v4:27.1.0'
-    compile 'com.android.support:appcompat-v7:27.1.0'
-    compile 'com.android.support:support-v13:27.1.0'
-    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    implementation project(':library')
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    testImplementation 'junit:junit:4.12'
+    implementation 'com.android.support:support-v4:27.1.0'
+    implementation 'com.android.support:appcompat-v7:27.1.0'
+    implementation 'com.android.support:support-v13:27.1.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
 }
