@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/text1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="home"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/text2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:text="office"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text1" />
+
+    <android.support.constraint.Barrier
+        android:id="@+id/barrier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="end"
+        app:constraint_referenced_ids="text1,text2" />
+
+    <TextView
+        android:id="@+id/text3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:text="text3text3text3text3text3text3text3text3text3text3text3text3text3text3text3text3text3text3text3text3text3text3text3text3text3text3text3text3text3text3text3text3text3text3text3text3text3text3text3text3text3text3text3text3text3text3text3text3text3text3text3text3text3text3text3text3text3text3text3text3text3text3text3text3text3text3text3text3text3text3text3text3text3text3text3text3text3text3text3text3text3text3text3text3text3text3text3text3text3text3text3text3text3text3text3text3text3text3text3text3text3text3text3text3text3text3text3text3text3text3text3text3text3text3text3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/barrier"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!--    在下面的例子中 ，不管text1 和 text2有多长，或者哪个更长，
+        它们的end属性都不会越过Barrier。而text3因为约束在Barrier的后面，
+        所以也就保证了text3总是在text1 和 text2后面。-->
+
+    <!-- marginEnd与marginright需要联合使用才行-->
+
+</android.support.constraint.ConstraintLayout>
