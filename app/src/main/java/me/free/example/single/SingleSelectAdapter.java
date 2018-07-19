@@ -18,7 +18,7 @@ import me.free.example.R;
  * @Package com.pengyuming.myapplication.demo
  * @Description: TODO (用一句话描述该文件做什么) Date: 2017-02-23  09:51
  */
-public class Demo2ListAdapter extends BaseQuickAdapter<DemoBean2, BaseViewHolder> implements View.OnClickListener {
+public class SingleSelectAdapter extends BaseQuickAdapter<DemoBean2, BaseViewHolder> implements View.OnClickListener {
 
 
     private int mSelectedPos = -1;//实现单选  方法二，变量保存当前选中的position
@@ -35,7 +35,7 @@ public class Demo2ListAdapter extends BaseQuickAdapter<DemoBean2, BaseViewHolder
         this.mSelectedPos = mSelectedPos;
     }
 
-    public Demo2ListAdapter(@LayoutRes int layoutResId, @Nullable List<DemoBean2> data) {
+    public SingleSelectAdapter(@LayoutRes int layoutResId, @Nullable List<DemoBean2> data) {
         super(layoutResId, data);
         if (mSelectedPos > -1 && data != null && data.size() > 0) {
             data.get(mSelectedPos).setSelected(true);

@@ -18,7 +18,7 @@ public class SingleSelectActivity extends AppCompatActivity {
     RecyclerView mRecyclerView;
     Button btnGet;
 
-    private Demo2ListAdapter mDemo2ListAdapter;
+    private SingleSelectAdapter mSingleSelectAdapter;
 
     private List<DemoBean2> mDemoBeanList;
 
@@ -30,10 +30,10 @@ public class SingleSelectActivity extends AppCompatActivity {
         mRecyclerView = findViewById(R.id.recycler_view);
         btnGet = findViewById(R.id.btn_get);
         showData();
-        mDemo2ListAdapter = new Demo2ListAdapter(R.layout.list_demo2_item, mDemoBeanList);
+        mSingleSelectAdapter = new SingleSelectAdapter(R.layout.list_demo2_item, mDemoBeanList);
 //        mRecyclerView.setAdapter(mDemo2ListAdapter);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
-        mDemo2ListAdapter.bindToRecyclerView(mRecyclerView);
+        mSingleSelectAdapter.bindToRecyclerView(mRecyclerView);
 
     }
 
@@ -45,9 +45,9 @@ public class SingleSelectActivity extends AppCompatActivity {
     }
 
     public void getSelectItem(View view) {
-        DemoBean2 demoBean2 = mDemo2ListAdapter.getmSelectedItem();
+        DemoBean2 demoBean2 = mSingleSelectAdapter.getmSelectedItem();
         if (demoBean2 != null) {
-            Log.i("TAG", "---------------->" + mDemo2ListAdapter.getmSelectedItem().toString());
+            Log.i("TAG", "---------------->" + mSingleSelectAdapter.getmSelectedItem().toString());
         }
     }
 }

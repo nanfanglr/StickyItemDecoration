@@ -16,7 +16,7 @@ import me.free.example.single.DemoBean2;
 public class MultiSelectActivity extends AppCompatActivity {
 
     RecyclerView mRecyclerView;
-    private Demo3ListAdapter mDemo3ListAdapter;
+    private MultiSelectAdapter mMultiSelectAdapter;
     private List<DemoBean2> mDemoBeanList;
 
     @Override
@@ -27,17 +27,17 @@ public class MultiSelectActivity extends AppCompatActivity {
 
         showData();
 
-        mDemo3ListAdapter = new Demo3ListAdapter(R.layout.list_demo2_item, mDemoBeanList);
+        mMultiSelectAdapter = new MultiSelectAdapter(R.layout.list_demo2_item, mDemoBeanList);
 //        mRecyclerView.setAdapter(mDemo2ListAdapter);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
-        mDemo3ListAdapter.bindToRecyclerView(mRecyclerView);
+        mMultiSelectAdapter.bindToRecyclerView(mRecyclerView);
 
-        mDemo3ListAdapter.setOnItemClickListener((adapter, view, position) -> {
+        mMultiSelectAdapter.setOnItemClickListener((adapter, view, position) -> {
             Log.i("TAG", "----viewsetOnItemClick-->getId=" + view.getId());
             Log.i("TAG", "----viewsetOnItemClick-->position=" + position);
         });
 
-        mDemo3ListAdapter.addFooterView(new View(this));
+        mMultiSelectAdapter.addFooterView(new View(this));
 
     }
 
@@ -49,7 +49,7 @@ public class MultiSelectActivity extends AppCompatActivity {
     }
 
     public void getSelectItem(View view) {
-        List<DemoBean2> list = mDemo3ListAdapter.getSelectList();
+        List<DemoBean2> list = mMultiSelectAdapter.getSelectList();
         for (DemoBean2 de : list) {
             Log.i("TAG", "---->getSelectItem=" + de.toString());
         }

@@ -18,11 +18,11 @@ import me.free.example.single.DemoBean2;
  * @version 1.0
  * @Description: recyclerview多选实现
  */
-public class Demo3ListAdapter extends BaseQuickAdapter<DemoBean2, BaseViewHolder> {
+public class MultiSelectAdapter extends BaseQuickAdapter<DemoBean2, BaseViewHolder> {
 
     private List<DemoBean2> selectList;
 
-    public Demo3ListAdapter(@LayoutRes int layoutResId, @Nullable List<DemoBean2> data) {
+    public MultiSelectAdapter(@LayoutRes int layoutResId, @Nullable List<DemoBean2> data) {
         super(layoutResId, data);
         selectList = new ArrayList<>();
     }
