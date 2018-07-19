@@ -1,4 +1,4 @@
-package me.free.example;
+package me.free.example.top;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
@@ -9,6 +9,8 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import me.free.example.R;
 
 /**
  * Created by cpf on 2018/1/16.

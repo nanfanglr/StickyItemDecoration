@@ -1,4 +1,4 @@
-package me.free.example;
+package me.free.example.top;
 
 import android.content.Context;
 import android.content.res.Resources;
@@ -12,6 +12,11 @@ import android.text.TextPaint;
 import android.text.TextUtils;
 import android.view.View;
 
+import me.free.example.R;
+
+/**
+ * 这个类还没有使用，
+ */
 public class PinnedSectionDecoration extends RecyclerView.ItemDecoration {
     private static final String TAG = "PinnedSectionDecoration";
 
