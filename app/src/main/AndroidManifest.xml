@@ -18,7 +18,14 @@
         </activity>
         <activity android:name=".top.RvTopActivity" />
         <activity android:name=".single.SingleSelectActivity" />
-        <activity android:name=".multi.MultiSelectActivity"></activity>
+        <activity
+            android:name=".edittext_1.RecyclerViewEditTextActivity"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
+        <activity
+            android:name=".edittext_3.RecyclerViewEditTextActivity3"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
+
+        <activity android:name=".multi.MultiSelectActivity" />
     </application>
 
 </manifest>
